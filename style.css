@@ -12,6 +12,10 @@
   font-family: sans-serif;
 }
 
+td {
+  vertical-align: middle;
+}
+
 thead {
   color: white;
   text-align: center;
@@ -28,10 +32,6 @@ span {
 thead tr > td {
   width: 200px;
   height: 100px;
-}
-
-thead tr td:not(:first-child) {
-  padding-top: 15px;
 }
 
 thead tr > td:nth-child(1) {
@@ -64,7 +64,8 @@ tfoot td {
   height: 50px;
 }
 
-tbody tr:nth-child(odd) > td:nth-child(odd) {
+tbody tr:nth-child(odd) > td:nth-child(odd),
+tfoot tr > td:nth-child(odd) {
   background-color: #dbdbdb;
 }
 
@@ -72,7 +73,8 @@ tbody tr:nth-child(odd) > td:nth-child(even) {
   background-color: #e7e7e7;
 }
 
-tbody tr:nth-child(even) > td:nth-child(odd) {
+tbody tr:nth-child(even) > td:nth-child(odd),
+tfoot tr > td:nth-child(even) {
   background-color: #e7e7e7;
 }
 
@@ -84,18 +86,9 @@ tbody tr > td:nth-child(1) {
   padding-left: 25px;
 }
 
-tfoot tr > td:nth-child(odd) {
-  background-color: #dbdbdb;
-}
-
-tfoot tr > td:nth-child(even) {
-  background-color: #e7e7e7;
-}
-
 tbody td:not(:first-child),
 tfoot td {
   text-align: center;
-  padding-top: 2%;
 }
 
 a {
@@ -105,4 +98,9 @@ a {
   border: 1px solid rgb(105, 105, 105);
   background-color: rgb(192, 192, 192);
   color: rgb(66, 65, 65);
+}
+
+a:hover {
+  background-color: rgb(255, 247, 247);
+  color: rgb(0, 0, 0);
 }
